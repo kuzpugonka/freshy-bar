@@ -184,13 +184,14 @@ const calculateAdd = () => {
   const modalAdd = document.querySelector(".modal_add");
   const formAdd = document.querySelector(".make__form-add");
 
+
   const makeTitle = modalAdd.querySelector(".make__title");
   const makeInputTitle = modalAdd.querySelector(".make__input-title");
+
   const makeTotalPrice = modalAdd.querySelector(".make__total-price");
-  const makeInputStartPrice = modalAdd.querySelector(
-    ".make__input-start-price"
-  );
+  const makeInputStartPrice = modalAdd.querySelector(".make__input-start-price");
   const makeInputPrice = modalAdd.querySelector(".make__input-price");
+
   const makeTotalSize = modalAdd.querySelector(".make__total-size");
   const makeInputSize = modalAdd.querySelector(".make__input-size");
 
@@ -200,7 +201,7 @@ const calculateAdd = () => {
     makeTotalPrice.textContent = `${totalPrice} ₽`;
   };
 
-  formAdd.addEventListener("chenge", handlerChange);
+  formAdd.addEventListener("change", handlerChange);
 
   const fillInForm = (data) => {
     makeTitle.textContent = data.title;
@@ -249,6 +250,7 @@ const init = async () => {
   modalController({
     modal: ".modal_make-your-own",
     btnOpen: ".cocktail__btn_make",
+    close: resetForm, // сама добавила
   });
 
   modalController({
