@@ -269,6 +269,8 @@
           </h3>
 
           <form class="make__form make__form_make-your-own">
+						<input type="hidden" class="make__input-title" name="title" />
+
             <fieldset class="make__fieldset make__fieldset-ingredients">
               <label class="make__label checkbox">
                 <input
@@ -401,7 +403,7 @@
           <h3 class="make__title">Банановый смузи</h3>
 
           <form class="make__form make__form-add">
-            <input type="text" class="make__input-title" name="title" />
+            <input type="hidden" class="make__input-title" name="title" />
             <div class="make__wrap-add">
               <fieldset class="make__fieldset make__fieldset-topping">
                 <legend class="make__legend">Дополнительно:</legend>
@@ -455,12 +457,12 @@
               <button class="btn make__add-btn" type="submit">Добавить</button>
 
               <div class="make__total">
-                <input type="text" class="make__input-start-price" />
+                <input type="hidden" class="make__input-start-price" />
                 <p class="make__total-price text-red">260 ₽</p>
-                <input type="text" class="make__input-price" name="price" />
+                <input type="hidden" class="make__input-price" name="price" />
 
                 <p class="make__total-size">300мл</p>
-                <input type="text" class="make__input-size" name="size" />
+                <input type="hidden" class="make__input-size" name="size" />
               </div>
             </div>
           </form>
