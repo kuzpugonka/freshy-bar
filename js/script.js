@@ -237,7 +237,7 @@ const calculateMakeYourOwn = () => {
   const resetForm = () => {
     makeTotalPrice.textContent = "";
     makeAddBtn.desabled = true;
-    formAdd.reset();
+    formMakeOwn.reset();
   };
 
   return { resetForm };
@@ -268,7 +268,7 @@ const calculateAdd = () => {
 
   formAdd.addEventListener("change", handlerChange);
   formControl(formAdd, () => {
-    modalAdd.closest('close')
+    modalAdd.closeModal('close');
   });
 
   const fillInForm = (data) => {
