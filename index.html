@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshy Bar</title>
+    
+    <link rel="preload" href="fonts/mulish-v12-latin-600.ttf" as="font" type="ttf" crossorigin>
+    <link rel="preload" href="fonts/mulish-v12-latin-600.woff2" as="font" type="woff2" crossorigin>
+    <link rel="preload" href="fonts/mulish-v12-latin-900.ttf" as="font" type="ttf" crossorigin>
+    <link rel="preload" href="fonts/mulish-v12-latin-900.woff2" as="font" type="woff2" crossorigin>
+    <link rel="preload" href="fonts/mulish-v12-latin-regular.ttf" as="font" type="ttf" crossorigin>
+    <link rel="preload" href="fonts/mulish-v12-latin-regular.woff2" as="font" type="woff2" crossorigin>
+    
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./css/normalise81.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <section class="header">
+            <div class="container header__container">
+                <img src="./img/logo.svg" alt="Логотип Freshy Bar" class="header__logo">
+                <div class="header__btns">
+                    <button class="header__btn-order">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.24999 7.013V6C8.24999 5.00544 8.64508 4.05161 9.34834 3.34835C10.0516 2.64509 11.0054 2.25 12 2.25C12.9946 2.25 13.9484 2.64509 14.6516 3.34835C15.3549 4.05161 15.75 5.00544 15.75 6V7.013C17.047 7.05 17.837 7.183 18.442 7.68C19.272 8.36 19.502 9.514 19.965 11.823L20.565 14.823C21.229 18.143 21.561 19.803 20.661 20.902C19.76 22 18.067 22 14.68 22H9.31999C5.93399 22 4.23999 22 3.33999 20.902C2.43999 19.804 2.77199 18.144 3.43599 14.823L4.03599 11.823C4.49799 9.514 4.72899 8.36 5.55799 7.68C6.16399 7.184 6.954 7.05 8.251 7.013H8.24999ZM9.74999 6C9.74999 5.40326 9.98705 4.83097 10.409 4.40901C10.831 3.98705 11.4033 3.75 12 3.75C12.5967 3.75 13.169 3.98705 13.591 4.40901C14.0129 4.83097 14.25 5.40326 14.25 6V7H9.74999V6ZM15 11C15.2652 11 15.5196 10.8946 15.7071 10.7071C15.8946 10.5196 16 10.2652 16 10C16 9.73478 15.8946 9.48043 15.7071 9.29289C15.5196 9.10536 15.2652 9 15 9C14.7348 9 14.4804 9.10536 14.2929 9.29289C14.1054 9.48043 14 9.73478 14 10C14 10.2652 14.1054 10.5196 14.2929 10.7071C14.4804 10.8946 14.7348 11 15 11ZM9.99999 10C9.99999 10.2652 9.89464 10.5196 9.7071 10.7071C9.51957 10.8946 9.26521 11 8.99999 11C8.73478 11 8.48042 10.8946 8.29289 10.7071C8.10535 10.5196 7.99999 10.2652 7.99999 10C7.99999 9.73478 8.10535 9.48043 8.29289 9.29289C8.48042 9.10536 8.73478 9 8.99999 9C9.26521 9 9.51957 9.10536 9.7071 9.29289C9.89464 9.48043 9.99999 9.73478 9.99999 10Z" fill="black"/>
+                            </svg>                        
+                    </button>
+                    <a class="btn header__btn" href="#goods">Заказать</a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2 class="hero__title">Выбери свой 
+                    <span class="text-red">освежающий
+                        
+                    </span> фреш
+                </h2>
+
+                <div class="hero__cups">
+                    <div class="hero__cup hero__cup-pink">
+                        <img src="./img/pink.png" alt="Стакан с розовым коктейлем" class="hero__img">
+                    </div>
+
+                    <div class="hero__cup hero__cup-orange">
+                        <img src="./img/green.png" alt="Стакан с зеленым коктейлем" class="hero__img">
+                    </div>
+
+                    <div class="hero__cup hero__cup-green">
+                        <img src="./img/orange.png" alt="Стакан с оранжевым коктейлем" class="hero__img">
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="goods" id="goods">
+            <div class="container">
+                <h2 class="goods__title">Меню</h2>
+
+                <ul class="goods__list">
+                    <li class="goods__item">
+                        <article class="goods__card cocktail">
+                            <img src="./img/make-your-own.jpg" alt="Коктейль собери сам" class="cocktail__img">
+
+                            <div class="cocktail__content">
+                                <div class="cocktail__text">
+                                    <h3 class="cocktail__title">
+                                        Собери сам
+                                    </h3>                                    
+                                    
+                                    <p class="cocktail__price text-red">
+                                        260 ₽
+                                    </p>
+
+                                    <p class="cocktail__size">
+                                        300мл
+                                    </p>                                    
+                                </div>                                
+
+                                <button class="btn cocktail__btn cocktail__btn-make">
+                                    Добавить
+                                </button>                            
+                            </div>
+
+                        </article>
+                    </li>
+                                        
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <img src="./img/logo.svg" alt="Логотип Freshy Bar" class="footer__logo">
+
+            <p class="footer-copyright">© Freshy Bar, 2023</p>
+
+            <ul class="footer__developer">
+                <li class="footer__developer-item">        
+                    Онлайн-школа METHED
+                </li>
+                <li class="footer__developer-item">
+                    Designer: 
+                    <a href="https://t.me/Mrshmallowww" class="footer__developer-link">Anastasia Ilina</a>
+                </li>
+                <li class="footer__developer-item">        
+                    Developer: 
+                    <a href="https://t.me/kuzpugonka4" class="footer__developer-link">Sofia Terekhova</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <div class="modal modal__order">
+        <div class="modal__main modal__main-order">
+            <div class="order">
+                <h2 class="order__title">Корзина<sup class="text-red order__count">(2)</sup>
+                </h2>
+
+                <ul class="order__list">
+                    <li class="order__item">
+                        <img class="order__img" src="./img/mango.jpg" alt="Название коктейля">
+
+                        <div class="order__info">
+                            <h3 class="order__name">Манго смузи</h3>
+
+                            <ul class="order__topping-list">
+                                <li class="order__topping-item">300мл</li>
+                                <li class="order__topping-item">Биоразлагаемый стакан</li>
+                                <li class="order__topping-item">Лед</li>
+                                <li class="order__topping-item">Мята</li>
+                            </ul>
+                        </div>
+
+                        <button class="order__item-delete" aria-label="Удалить коктейль из корзины"></button>
+
+                        <p class="order__item-price">380&nbsp;₽</p>
+                    </li>
+                    <!-- Второй -->
+                    <li class="order__item">
+                        <img class="order__img" src="./img/make-your-own.jpg" alt="Название коктейля">
+
+                        <div class="order__info">
+                            <h3 class="order__name">Конструктор: Банан, яблоко, киви</h3>
+
+                            <ul class="order__topping-list">
+                                <li class="order__topping-item">300мл</li>
+                                <li class="order__topping-item">Биоразлагаемый стакан</li>
+                            </ul>
+                        </div>
+
+                        <button class="order__item-delete" aria-label="Удалить коктейль из корзины"></button>
+
+                        <p class="order__item-price">520&nbsp;₽</p>
+                    </li>
+                </ul>
+
+                <div class="order__price">
+                    <p class="order__price-title">Итого:</p>
+                    <p class="order__total-price text-red">950&nbsp;₽</p>
+                </div>
+
+                <form action="" class="order__form">
+                    <label for="" class="order__label">
+                        <input type="text" class="order__input" placeholder="Ваше имя">
+                    </label>
+                    
+                    <label for="" class="order__label">
+                        <input type="text" class="order__input" placeholder="Телефон">
+                    </label>
+
+                    <button class="order__submit btn">Заказать</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal__make-your-own">
+        <div class="modal__main modal__main-make">
+            <div class="make">
+                <h3 class="make__title">Собери
+                    <span class="text-red">свой</span> смузи
+                </h3>
+
+                <form  class="make__form make__form-make-your-own">
+                    <fieldset class="make__fieldset make__fieldset-ingredients">
+
+                        <label class="make__label checkbox">
+                            <input type="checkbox" name="ingredients" value="Клубника" class="checkbox__input">Клубника
+                        </label>
+
+                        <label class="make__label checkbox">
+                            <input type="checkbox" name="ingredients" value="Банан" class="checkbox__input">Банан
+                        </label>
+
+                        <label class="make__label checkbox">
+                            <input type="checkbox" name="ingredients" value="Манго" class="checkbox__input">Манго
+                        </label>
+
+                        <label class="make__label checkbox">
+                            <input type="checkbox" name="ingredients" value="Киви" class="checkbox__input">Киви
+                        </label>
+
+                        <label class="make__label checkbox">
+                            <input type="checkbox" name="ingredients" value="Маракуйя" class="checkbox__input">Маракуйя
+                        </label>
+
+                        <label class="make__label checkbox">
+                            <input type="checkbox" name="ingredients" value="Яблоко" class="checkbox__input">Яблоко
+                        </label>
+                    </fieldset>
+
+                    <div class="make__wrap-add">
+                        <fieldset class="make__fieldset make__fieldset-topping">
+                            <legend class="make__legend">Дополнительно:</legend>
+                            <label class="make__label checkbox">
+                                <input type="checkbox" name="topping" value="Мята" class="checkbox__input">Мята
+                                <span class="make__upsale">(+50 ₽)</span>
+                            </label>
+    
+                            <label class="make__label checkbox">
+                                <input type="checkbox" name="topping" value="Лед" class="checkbox__input">Лед
+                                <span class="make__upsale">(+10 ₽)</span>
+                            </label>
+                        </fieldset>
+    
+                        <fieldset class="make__fieldset make__fieldset-cup">
+                            <legend class="make__legend">Стакан::</legend>
+                            <label class="make__label radio">
+                                <input type="radio" name="cup" value="Биоразлагаемый" class="radio__input">Биоразлагаемый
+                                <span class="make__upsale">(+20 ₽)</span>
+                            </label>
+    
+                            <label class="make__label radio">
+                                <input type="radio" name="cup" value="Пластиковый" class="radio__input" checked>Пластиковый
+                                <span class="make__upsale">(+0 ₽)</span>
+                            </label>
+                        </fieldset>
+                    </div>
+
+                    <div class="make__footer">
+                        <button class="btn make__add-btn" type="submit">Добавить</button>
+
+                        <div class="make__total">
+                            <input type="hidden" class="make__input make__input-price" value="150">
+                            <p class="make__total-price text-red">340 ₽</p>
+                            <p class="make__total-size">300мл</p>                          
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal__add">
+        <div class="modal__main modal__main-make">
+            <div class="make">
+                <h3 class="make__title">Банановый смузи
+                </h3>
+
+                <form  class="make__form make__form-add">
+                    <input type="text" class="make__input-title" name="title">
+                    <div class="make__wrap-add">
+                        <fieldset class="make__fieldset make__fieldset-topping">
+                            <legend class="make__legend">Дополнительно:</legend>
+                            <label class="make__label checkbox">
+                                <input type="checkbox" name="topping" value="Мята" class="checkbox__input">Мята
+                                <span class="make__upsale">(+50 ₽)</span>
+                            </label>
+    
+                            <label class="make__label checkbox">
+                                <input type="checkbox" name="topping" value="Лед" class="checkbox__input">Лед
+                                <span class="make__upsale">(+10 ₽)</span>
+                            </label>
+                        </fieldset>
+    
+                        <fieldset class="make__fieldset make__fieldset-cup">
+                            <legend class="make__legend">Стакан::</legend>
+                            <label class="make__label radio">
+                                <input type="radio" name="cup" value="Биоразлагаемый" class="radio__input">Биоразлагаемый
+                                <span class="make__upsale">(+20 ₽)</span>
+                            </label>
+    
+                            <label class="make__label radio">
+                                <input type="radio" name="cup" value="Пластиковый" class="radio__input" checked>Пластиковый
+                                <span class="make__upsale">(+0 ₽)</span>
+                            </label>
+                        </fieldset>
+                    </div>
+
+                    <div class="make__footer">
+                        <button class="btn make__add-btn" type="submit">Добавить</button>
+
+                        <div class="make__total">
+                            <input type="text" class="make__input-start-price">
+                            <p class="make__total-price text-red">340 ₽</p>
+                            <input type="text" class="make__input-price" name="price">
+
+                            <p class="make__total-size">300мл</p>
+                            <input type="text" class="make__input-size" name="size">
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
