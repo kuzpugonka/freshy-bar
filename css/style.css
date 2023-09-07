@@ -586,7 +586,7 @@ text-align: end;
 } 
 
 /* Модальное окно - Конструктор напитка */
-.modal__main-make {
+.modal__main_make {
     max-width: 640px;
 }
 
