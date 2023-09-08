@@ -64,7 +64,7 @@
             class="header__logo"
           />
           <div class="header__btns">
-            <button class="header__btn-order">
+            <button class="header__btn-order" aria-label="открыть корзину">
               <svg
                 width="24"
                 height="24"
@@ -190,7 +190,7 @@
           </h2>
 
           <ul class="order__list">
-            <li class="order__item">
+            <!-- <li class="order__item">
               <img
                 class="order__img"
                 src="./img/mango.jpg"
@@ -215,7 +215,6 @@
 
               <p class="order__item-price">380&nbsp;₽</p>
             </li>
-            <!-- Второй -->
             <li class="order__item">
               <img
                 class="order__img"
@@ -238,7 +237,7 @@
               ></button>
 
               <p class="order__item-price">520&nbsp;₽</p>
-            </li>
+            </li> -->
           </ul>
 
           <div class="order__price">
@@ -248,11 +247,11 @@
 
           <form action="" class="order__form">
             <label for="" class="order__label">
-              <input type="text" class="order__input" placeholder="Ваше имя" />
+              <input type="text" class="order__input" required name="name" placeholder="Ваше имя" />
             </label>
 
             <label for="" class="order__label">
-              <input type="text" class="order__input" placeholder="Телефон" />
+              <input type="text" class="order__input" required name="phone" placeholder="Телефон" />
             </label>
 
             <button class="order__submit btn">Заказать</button>
@@ -269,7 +268,7 @@
           </h3>
 
           <form class="make__form make__form_make-your-own">
-						<input type="hidden" class="make__input-title" name="title" />
+            <input type="hidden" class="make__input-title" name="title" />
 
             <fieldset class="make__fieldset make__fieldset-ingredients">
               <label class="make__label checkbox">
@@ -384,11 +383,13 @@
                   type="hidden"
                   class="make__input make__input-price"
                   value="150"
-									name="price"
+                  name="price"
                 />
                 <p class="make__total-price text-red">
-									<!-- 340 ₽ -->
-								</p>
+                  <!-- 340 ₽ -->
+                </p>
+                <input type="hidden" class="make__input make__input-size" name="size" value="300"/>
+
                 <p class="make__total-size">300мл</p>
               </div>
             </div>
