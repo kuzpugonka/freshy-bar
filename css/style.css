@@ -61,7 +61,7 @@ html {
 body {
   overflow: hidden;
   min-width: 320px;
-  min-height: 100px;
+  min-height: 100vh;
   font-family: "Mulish", sans-serif;
   font-weight: normal;
   font-size: 18px;
@@ -384,6 +384,10 @@ fieldset {
   .hero__cup-orange {
     margin-top: -50px;
   }
+   .hero__img {
+    bottom: 9%;
+    width: 60%;
+  }
   .decor__img_01 {
     width: 131px;
     height: 125px;
@@ -455,6 +459,9 @@ fieldset {
   .header__btn-order {
     margin-right: 24px;
   }
+  .header__btns {
+    gap: 0px;
+  }
 
   .hero {
     padding-bottom: 46px;
@@ -462,7 +469,8 @@ fieldset {
 
   .hero__title {
     font-size: 44px;
-    /* max-width: 462px; */
+    max-width: 462px;
+    letter-spacing: -3px;
   }
 
   .hero__cups {
@@ -473,9 +481,42 @@ fieldset {
   .hero__cup {
     border-radius: 12px;
   }
+  .hero__cup-orange {
+    margin-top: -35px;
+  }
 
-  .hero__img {
-    bottom: 10%;
+   .decor__img_01 {
+    width: 76px;
+    height: 73px;
+    top: 21%;
+    left: -2%;
+  }
+  .decor__img_02 {
+    width: 72px;
+    height: 58px;
+    right: 6%;
+    top: 10%;
+  }
+  .decor__img_03 {
+    width: 25px;
+    height: 23px;
+    bottom: 52%;
+  }
+  .decor__img_04 {
+    width: 22px;
+    height: 19px;
+    top: 32%;
+  }
+  .decor__img_05 {
+    width: 41px;
+    height: 44px;
+    left: 28%;
+  }
+  .decor__img_06 {
+    width: 96px;
+    height: 93px;
+    right: -5%;
+    bottom: -11%;
   }
 
   .goods {
@@ -562,10 +603,39 @@ fieldset {
 
   .hero__title {
     font-size: 36px;
+    letter-spacing: -2px;
   }
 
   .hero__cups {
     display: none;
+  }
+ 
+  .decor__img_01 {
+    width: 76px;
+    height: 73px;
+    top: 100%;
+    left: 3%;
+  }
+  .decor__img_02 {
+    width: 62px;
+    height: 50px;
+    right: 0%;
+    top: 80%;
+  }
+  .decor__img_03 {
+    width: 25px;
+    height: 23px;
+    top: 112%;
+    left: 55%;
+  }
+  .decor__img_04 {
+   display: none;
+  }
+  .decor__img_05 {
+    display: none;
+  }
+  .decor__img_06 {
+   display: none;
   }
 
   .goods {
