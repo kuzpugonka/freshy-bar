@@ -77,6 +77,11 @@ button {
   border: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -207,7 +212,7 @@ fieldset {
 .decor__img_01 {
   width: 223px;
   height: 214px;
-  background: url(../img/img1.png);
+  background-image: url(../img/img1.png);
   filter: drop-shadow(0px 10px 30px rgba(164, 7, 2, 0.5));
   top: 19%;
   left: -6%;
@@ -215,7 +220,7 @@ fieldset {
 .decor__img_02 {
   width: 180px;
   height: 147px;
-  background: url(../img/img2.png);
+  background-image: url(../img/img2.png);
   filter: drop-shadow(0px 4px 20px rgba(17, 7, 108, 0.5));
   right: 6%;
   top: 11%;
@@ -223,7 +228,7 @@ fieldset {
 .decor__img_03 {
   width: 46px;
   height: 41px;
-  background: url(../img/img3.png);
+  background-image: url(../img/img3.png);
   filter: drop-shadow(0px 4px 20px rgba(223, 97, 15, 0.4));
   bottom: 46%;
   left: 36%;
@@ -231,7 +236,7 @@ fieldset {
 .decor__img_04 {
   width: 46px;
   height: 41px;
-  background: url(../img/img3.png);
+  background-image: url(../img/img3.png);
   filter: drop-shadow(0px 4px 20px rgba(223, 97, 15, 0.4));
   right: 0;
   top: 34%;
@@ -239,7 +244,7 @@ fieldset {
 .decor__img_05 {
   width: 109px;
   height: 114px;
-  background: url(../img/img5.png);
+  background-image: url(../img/img5.png);
   filter: drop-shadow(0px 4px 20px rgba(1, 30, 82, 0.5));
   bottom: -4%;
   left: 27%;
@@ -247,7 +252,7 @@ fieldset {
 .decor__img_06 {
   width: 223px;
   height: 214px;
-  background: url(../img/img1.png);
+  background-image: url(../img/img1.png);
   transform: scaleX(-1);
   filter: drop-shadow(0px 10px 30px rgba(164, 7, 2, 0.5));
   right: -5%;
@@ -382,8 +387,8 @@ fieldset {
   .decor__img_01 {
     width: 131px;
     height: 125px;
-    top: 19%;
-    left: -6%;
+    top: 25%;
+    left: 1%;
   }
   .decor__img_02 {
     width: 122px;
@@ -394,8 +399,8 @@ fieldset {
   .decor__img_03 {
     width: 34px;
     height: 30px;
-    bottom: 46%;
-    left: 36%;
+    bottom: 44%;
+    left: 37%;
   }
   .decor__img_04 {
     width: 38px;
@@ -406,18 +411,24 @@ fieldset {
   .decor__img_05 {
     width: 61px;
     height: 64px;
-    bottom: -4%;
-    left: 27%;
+    bottom: -2%;
+    left: 29%;
   }
   .decor__img_06 {
     width: 129px;
     height: 124px;
-    right: -5%;
-    bottom: -10%;
+    right: -3%;
+    bottom: -5%;
+  }
+  .goods__title {
+    letter-spacing: -4px;
   }
 
   .goods__list {
     grid-template-columns: repeat(3, 280px);
+  }
+  .footer {
+    padding: 25px 0;
   }
 }
 
