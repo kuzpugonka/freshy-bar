@@ -2,6 +2,7 @@
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Mulish";
+  font-display: swap;
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/mulish-v12-latin-regular.woff2") format("woff2"),
@@ -12,6 +13,7 @@
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Mulish";
+  font-display: swap;
   font-style: normal;
   font-weight: 600;
   src: url("../fonts/mulish-v12-latin-600.woff2") format("woff2"),
@@ -22,6 +24,7 @@
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Mulish";
+  font-display: swap;
   font-style: normal;
   font-weight: 900;
   src: url("../fonts/mulish-v12-latin-900.woff2") format("woff2"),
@@ -199,15 +202,14 @@ fieldset {
 .decor {
   position: absolute;
   inset: 0;
-  overflow: visible;
+  pointer-events: none; 
+  /* делает блок недоступным */
 }
 .decor__img {
   position: absolute;
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
-  /* display: block;
-  overflow: visible; */
 }
 .decor__img_01 {
   width: 223px;
@@ -216,6 +218,7 @@ fieldset {
   filter: drop-shadow(0px 10px 30px rgba(164, 7, 2, 0.5));
   top: 19%;
   left: -6%;
+  animation: flying01 2s ease-in-out;
 }
 .decor__img_02 {
   width: 180px;
@@ -224,6 +227,7 @@ fieldset {
   filter: drop-shadow(0px 4px 20px rgba(17, 7, 108, 0.5));
   right: 6%;
   top: 11%;
+  animation: flying02 2s ease-in-out;
 }
 .decor__img_03 {
   width: 46px;
@@ -232,6 +236,7 @@ fieldset {
   filter: drop-shadow(0px 4px 20px rgba(223, 97, 15, 0.4));
   bottom: 46%;
   left: 36%;
+  animation: flying03 2s ease-in-out;
 }
 .decor__img_04 {
   width: 46px;
@@ -240,6 +245,7 @@ fieldset {
   filter: drop-shadow(0px 4px 20px rgba(223, 97, 15, 0.4));
   right: 0;
   top: 34%;
+  animation: flying04 2s ease-in-out;
 }
 .decor__img_05 {
   width: 109px;
@@ -248,6 +254,7 @@ fieldset {
   filter: drop-shadow(0px 4px 20px rgba(1, 30, 82, 0.5));
   bottom: -4%;
   left: 27%;
+  animation: flying05 2s ease-in-out;
 }
 .decor__img_06 {
   width: 223px;
@@ -257,6 +264,7 @@ fieldset {
   filter: drop-shadow(0px 10px 30px rgba(164, 7, 2, 0.5));
   right: -5%;
   bottom: -10%;
+  animation: flying06 2s ease-in-out;
 }
 
 /* goods */
@@ -384,7 +392,7 @@ fieldset {
   .hero__cup-orange {
     margin-top: -50px;
   }
-   .hero__img {
+  .hero__img {
     bottom: 9%;
     width: 60%;
   }
@@ -393,35 +401,41 @@ fieldset {
     height: 125px;
     top: 25%;
     left: 1%;
+    animation: flying01-lt 2s ease-in-out;
   }
   .decor__img_02 {
     width: 122px;
     height: 99px;
     right: 6%;
+    animation: flying02-lt 2s ease-in-out;
     top: 11%;
   }
   .decor__img_03 {
     width: 34px;
     height: 30px;
     bottom: 44%;
+    animation: flying03-lt 2s ease-in-out;
     left: 37%;
   }
   .decor__img_04 {
     width: 38px;
     height: 33px;
     right: 0;
+    animation: flying04-lt 2s ease-in-out;
     top: 34%;
   }
   .decor__img_05 {
     width: 61px;
     height: 64px;
     bottom: -2%;
+    animation: flying05-lt 2s ease-in-out;
     left: 29%;
   }
   .decor__img_06 {
     width: 129px;
     height: 124px;
     right: -3%;
+    animation: flying06-lt 2s ease-in-out;
     bottom: -5%;
   }
   .goods__title {
@@ -485,38 +499,44 @@ fieldset {
     margin-top: -35px;
   }
 
-   .decor__img_01 {
+  .decor__img_01 {
     width: 76px;
     height: 73px;
     top: 21%;
     left: -2%;
+    animation: flying01-tab 2s ease-in-out;
   }
   .decor__img_02 {
     width: 72px;
     height: 58px;
     right: 6%;
     top: 10%;
+    animation: flying02-tab 2s ease-in-out;
   }
   .decor__img_03 {
     width: 25px;
     height: 23px;
     bottom: 52%;
+    animation: flying03-tab 2s ease-in-out;
   }
   .decor__img_04 {
     width: 22px;
     height: 19px;
     top: 32%;
+    animation: flying04-tab 2s ease-in-out;
   }
   .decor__img_05 {
     width: 41px;
     height: 44px;
     left: 28%;
+    animation: flying05-tab 2s ease-in-out;
   }
   .decor__img_06 {
     width: 96px;
     height: 93px;
     right: -5%;
     bottom: -11%;
+    animation: flying06-tab 2s ease-in-out;
   }
 
   .goods {
@@ -554,11 +574,16 @@ fieldset {
   }
 
   .cocktail__title {
-    flex: 0 0 100%;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .cocktail__price {
+    text-align: left;
+    align-self: flex-end;
   }
 
   .cocktail__size {
-    flex: auto;
     font-size: 10px;
   }
 
@@ -609,33 +634,36 @@ fieldset {
   .hero__cups {
     display: none;
   }
- 
+
   .decor__img_01 {
     width: 76px;
     height: 73px;
     top: 100%;
     left: 3%;
+    animation: flying01-mob 2s ease-in-out;
   }
   .decor__img_02 {
     width: 62px;
     height: 50px;
     right: 0%;
     top: 80%;
+    animation: flying02-mob 2s ease-in-out;
   }
   .decor__img_03 {
     width: 25px;
     height: 23px;
     top: 112%;
     left: 55%;
+    animation: flying03-mob 2s ease-in-out;
   }
   .decor__img_04 {
-   display: none;
+    display: none;
   }
   .decor__img_05 {
     display: none;
   }
   .decor__img_06 {
-   display: none;
+    display: none;
   }
 
   .goods {
@@ -931,4 +959,232 @@ fieldset {
   color: var(--checkbox);
   text-align: right;
   font-size: 12px;
+}
+
+/* Анимация 1440 */
+@keyframes flying01 {
+  0% {
+    top: -100%;
+    left: -100%;
+  }
+  100% {
+    top: 19%;
+    left: -6%;
+  }
+}
+@keyframes flying02 {
+  0% {
+    top: -100%;
+    right: 200%;
+  }
+  100% {
+    right: 6%;
+    top: 11%;
+  }
+}
+@keyframes flying03 {
+  0% {
+    bottom: -100%;
+    left: -100%;
+  }
+  100% {
+    bottom: 46%;
+    left: 36%;
+  }
+}
+@keyframes flying04 {
+  0% {
+    right: -100%;
+    top: -100%;
+  }
+  100% {
+    right: 0;
+    top: 34%;
+  }
+}
+@keyframes flying05 {
+  0% {
+    bottom: -100%;
+    left: -100%;
+  }
+  100% {
+    bottom: -4%;
+    left: 27%;
+  }
+}
+@keyframes flying06 {
+  0% {
+    right: 200%;
+    bottom: -100%;
+  }
+  100% {
+    right: -5%;
+    bottom: -10%;
+  }
+}
+/* для 1024 */
+@keyframes flying01-lt {
+  0% {
+    top: -100%;
+    left: -100%;
+  }
+  100% {
+    top: 25%;
+    left: 1%;
+  }
+}
+@keyframes flying02-lt {
+  0% {
+    top: -100%;
+    right: 200%;
+  }
+  100% {
+    right: 6%;
+    top: 11%;
+  }
+}
+@keyframes flying03-lt {
+  0% {
+    bottom: -100%;
+    left: -100%;
+  }
+  100% {
+    bottom: 44%;
+    left: 37%;
+  }
+}
+@keyframes flying04-lt {
+  0% {
+    right: -100%;
+    top: -100%;
+  }
+  100% {
+    right: 0;
+    top: 34%;
+  }
+}
+@keyframes flying05-lt {
+  0% {
+    bottom: -100%;
+    left: -100%;
+  }
+  100% {
+    bottom: -2%;
+    left: 29%;
+  }
+}
+@keyframes flying06-lt {
+  0% {
+    right: 200%;
+    bottom: -100%;
+  }
+  100% {
+    right: -3%;
+    bottom: -5%;
+  }
+}
+/* для 940 */
+@keyframes flying01-tab {
+  0% {
+    top: -100%;
+    left: -100%;
+  }
+  100% {
+    top: 21%;
+    left: -2%;
+  }
+}
+@keyframes flying02-tab {
+  0% {
+    top: -100%;
+    right: 200%;
+  }
+  100% {
+    right: 6%;
+    top: 10%;
+  }
+}
+@keyframes flying03-tab {
+  0% {
+    bottom: -100%;
+    left: -100%;
+  }
+  100% {
+    bottom: 52%;
+    left: 37%;
+  }
+}
+@keyframes flying04-tab {
+  0% {
+    right: -100%;
+    top: -100%;
+  }
+  100% {
+    right: 0;
+    top: 32%;
+  }
+}
+@keyframes flying05-tab {
+  0% {
+    bottom: -100%;
+    left: -100%;
+  }
+  100% {
+    bottom: -2%;
+    left: 28%;
+  }
+}
+@keyframes flying06-tab {
+  0% {
+    right: 200%;
+    bottom: -100%;
+  }
+  100% {
+    right: -5%;
+    bottom: -11%;
+  }
+}
+
+/* для 640 */
+@keyframes flying01-mob {
+  0% {
+    top: -100%;
+    left: -100%;
+  } 
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+  100% {
+    top: 100%;
+    left: 3%;
+  }
+}
+@keyframes flying02-mob {
+  0% {
+    top: -100%;
+    right: -100%;
+  }
+  50% {
+    top: 50%;
+    right: 50%;
+  }
+  100% {
+    right: 0%;
+    top: 80%;
+  }
+}
+@keyframes flying03-mob {
+  0% {
+    top: -100%;
+    left: 36%;
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+  100% {
+    top: 112%;
+    left: 55%;
+  }
 }
